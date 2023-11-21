@@ -23,8 +23,7 @@ process.stdin.on("end", solve);
 
 function factorize(number) {
   const res = [];
-  const limit = Math.sqrt(number);
-  for (let i = 2; i < limit; ) {
+  for (let i = 2; i * i <= number; ) {
     if (number % i === 0) {
       res.push(i);
       number = number / i;
